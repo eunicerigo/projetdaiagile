@@ -60,7 +60,7 @@ public class bd {
         if (rs.next()) {
             System.out.println("connect ok");
             //ok
-            String type = rs.getString(1);
+            String type = rs.getString("TYPEU");
 
             if (type == "COACH") {
                 rs1 = 1;
@@ -234,21 +234,23 @@ public class bd {
     }
 
     //Programme de test de la connexion à la bd
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args)  {
         bd unebd = new bd();
-        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
-        Utilisateur u1 = new Utilisateur("Setilahy", "Sergio", 
-            "sergio@example.com", "12test", "M", 
-            formatDate.parse("27/09/1990"), "01-23-45-67-89", 
-            "Client", new Date(), "Potentiel");
+//        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
+//        Utilisateur u1 = new Utilisateur("Setilahy", "Sergio", 
+//            "sergio@example.com", "12test", "M", 
+//            formatDate.parse("27/09/1990"), "01-23-45-67-89", 
+//            "Client", new Date(), "Potentiel");
+//
+//        int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
-        int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
-
-        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
+//        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
         
-        /*ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
+        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
         for (Utilisateur user : listeUtilisateur) {
             System.out.println(user.getNomu() + " " + user.getPrenomu());
-        }*/
+        }
+        
+      //  unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
     }
 }
