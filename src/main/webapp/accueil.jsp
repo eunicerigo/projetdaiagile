@@ -65,6 +65,63 @@
             </div>
         </section>
 
+        <!-- apercu -->
+        <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="align-center">
+                            <div class="flexslider testimonials-slider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="testimonial clearfix">
+                                            <div class="mar-bot20">
+                                                <img alt="" src="img/testimonial/coachsportif.jpg" class="img-circle">
+                                            </div>
+                                            <i class="fa fa-quote-left fa-5x"></i>
+                                            <h5>
+                                                Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                                            </h5>
+                                            <br/>
+                                            <span class="author">&mdash; SARAH DOE <a href="#">www.siteurl.com</a></span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="testimonial clearfix">
+                                            <div class="mar-bot20">
+                                                <img alt="" src="img/testimonial/testimonial2.png" class="img-circle">
+                                            </div>
+                                            <i class="fa fa-quote-left fa-5x"></i>
+                                            <h5>
+                                                Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                                            </h5>
+                                            <br/>
+                                            <span class="author">&mdash; NICOLE DOE <a href="#">www.siteurl.com</a></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="testimonial clearfix">
+                                            <div class="mar-bot20">
+                                                <img alt="" src="img/testimonial/testimonial3.png" class="img-circle">
+                                            </div>
+                                            <i class="fa fa-quote-left fa-5x"></i>
+                                            <h5>
+                                                Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                                            </h5>
+                                            <br/>
+                                            <span class="author">&mdash; DASON KRUN <a href="#">www.siteurl.com</a></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </body>
 </html>
 </f:view>
