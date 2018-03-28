@@ -42,7 +42,7 @@ function getXMLHttpRequest()
 function inscrireUtilisateur(){
     var xhr = getXMLHttpRequest();
     
-    var civ = "civ=" + document.getElementById("civilite").value;
+    var civ = "genre=" + document.getElementById("genre").value;
     var nom = "nom=" + document.getElementById("nom").value;
     var prenom = "prenom=" + document.getElementById("prenom").value;
     var date = "date=" + document.getElementById("date").value;
@@ -51,6 +51,22 @@ function inscrireUtilisateur(){
      var mail2 = "mail2=" + document.getElementById("mail2").value;
      var mdp = "mdp=" + document.getElementById("mdp").value;
      var obj = "obj=" + document.getElementById("obj").value;
+     
+     
+
+    xhr.open("get", "ServeletInscriptionUtilisateur?genre=" + genre.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?nom=" + nom.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?prenom=" + prenom.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?datenaissance=" + datenaissance.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?tel=" + tel.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?mail1=" + mail1.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?mdp=" + mdp.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?obj=" + obj.value());
+
+    
+
+     
+     
 }
 
 

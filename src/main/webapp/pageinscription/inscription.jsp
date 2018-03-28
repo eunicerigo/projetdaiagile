@@ -48,10 +48,10 @@
                         </div>
                         <div class="cform" id="contact-form">
                             <form name="Formulaires" method="post" onsubmit="return verifier()">
-                                <div name='civilite'>
-                                    Civilité: <select name="civilite" id ="civilite">
-                                        <option value="Mme">Mme.</option>
-                                        <option value="M">M.</option>
+                                <div name='genre'>
+                                    Civilité: <select name="genre" id ="genre">
+                                        <option value="H">Homme.</option>
+                                        <option value="F">Femme.</option>
                                     </select>(*)
                                 </div>
 
