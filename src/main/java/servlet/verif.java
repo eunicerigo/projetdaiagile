@@ -42,7 +42,7 @@ public class verif extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             RequestDispatcher rd = null;
             //GET Utilisateur
-            String email = request.getParameter("txtemai");
+            String email = request.getParameter("txtemail");
             String mdp = request.getParameter("txtmdp");
             bd unebd = new bd();
             int rs = unebd.verifLogin(email, mdp);
@@ -52,14 +52,17 @@ public class verif extends HttpServlet {
             if (rs == 1) {
                 out.println("coach Login succes!!!");
                 rd = request.getRequestDispatcher("index.jsp");// il faut changer adresse
+                 rd.forward(request, response);
             } //CLIENT
             else if (rs == 2) {
                 out.println(" client Login sucess!!!");
                 rd = request.getRequestDispatcher("inscription.jsp");// il faut changer adresse
+                 rd.forward(request, response);
             } //ADMIN
             else if (rs == 3) {
                 out.println(" admin Login sucess!!!");
                 rd = request.getRequestDispatcher("accueil.jsp");// il faut changer adresse
+                 rd.forward(request, response);
             } else //ko
             {
                 out.println("<script LANGUAGE='JavaScript'>");
@@ -69,7 +72,7 @@ public class verif extends HttpServlet {
 
             }
 
-            rd.forward(request, response);
+          //  rd.forward(request, response);
         } 
     }
 
