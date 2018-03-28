@@ -6,5 +6,7 @@
 <a href="connection.html">connection</a>
 <br>
 <a href="accueil.jsp">accueil</a>
+<br>
+<a href="inscription.jsp">accueil</a>
 </body>
 </html>
