@@ -14,6 +14,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" 
+              href="js/rs-plugin/css/settings.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="isotope.css" media="screen">
+        <link rel="stylesheet" 
+              href="flexslider.css" type="text/css">
+        <link rel="stylesheet" href="jquery.fancybox.css" type="text/css" 
+              media="screen">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" 
+              href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
+        <link rel="stylesheet" href="style.css">
+        <!-- skin -->
+        <link rel="stylesheet" href="default.css">
     </head>
     <body>
         <%
