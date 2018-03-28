@@ -61,7 +61,7 @@ public class bd {
         }
 
         //Requête SQL
-        String recupererUtilisateur = "SELECT NOMU, PRENOMU FROM utilisateur";
+        String recupererUtilisateur = "SELECT NOMU, PRENOMU FROM UTILISATEUR";
 
         //Ouverture de l'espace de requête
         ResultSet rs = null;
@@ -114,7 +114,7 @@ public class bd {
         }
 
         //Requête SQL
-        String inscrirebase = "INSERT INTO utilisateur "
+        String inscrirebase = "INSERT INTO UTILISATEUR "
         + "(CODEU, NOMU, PRENOMU, MAILU, MDPU, GENREU, TELU) "
         + "VALUES ('" + lutilisateur.getCodeu() + "','" + lutilisateur.getNomu() + "','"
         + lutilisateur.getPrenomu() + "','" + lutilisateur.getMailu() + "','" + lutilisateur.getMdpu() + "','"
@@ -156,16 +156,16 @@ public class bd {
     public static void main(String[] args) throws ParseException {
         bd unebd = new bd();
         SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
-        /*Utilisateur u1 = new Utilisateur(1, "Setilahy", "Sergio", "sergio@example.com", 
+        Utilisateur u1 = new Utilisateur(1, "Setilahy", "Sergio", "sergio@example.com", 
                 "12test", "M", "01-23-45-67-89" );
 
         int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
-        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);*/
+        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
         
-        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
+        /*ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
         for (Utilisateur user : listeUtilisateur) {
             System.out.println(user.getNomu() + " " + user.getPrenomu());
-        }
+        }*/
     }
 }
