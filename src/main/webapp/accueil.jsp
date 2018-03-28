@@ -22,7 +22,7 @@
             <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen">
             <link rel="stylesheet" 
                   href="flexslider.css" type="text/css">
-            <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" 
+            <link rel="stylesheet" href="js/jquery.fancybox.css" type="text/css" 
                   media="screen">
             <link rel="stylesheet" href="css/bootstrap.css">
             <link rel="stylesheet" 
