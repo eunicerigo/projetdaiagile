@@ -48,7 +48,7 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
         
        //Utilisateur ut1  = new Utilisateur(nom,prenom,mail1,mdp,genre,datenaissance,tel,"CLIENT",obj,,"potentiel");
         
-      //  bd newbd = new bd(); 
+       bd newbd = new bd(); 
         
       //  newbd.inscrirebaseutilisateur(new Utilisateur());
         
