@@ -50,7 +50,6 @@ public class bd {
         Statement st;
         int rs1 = 0;
 
-
         String sql = "select TYPEU from UTILISATEUR where MAILU='" + email + "' and MDPU = '" + mdp + "'";
         st = cx.createStatement();
         ResultSet rs = st.executeQuery(sql); //resultat
@@ -74,12 +73,14 @@ public class bd {
         {
             rs1 = 4;
         }
-       return rs1;
+        return rs1;
 
     }
 
     //Methode de récuperration des utilisateurs
-    public ArrayList<Utilisateur> obtenirutilisateurs() {
+    public ArrayList<Utilisateur> obtenirutilisateurs() throws ParseException {
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+        
         ArrayList<Utilisateur> listeUtilisateur = new ArrayList();
         //Espace d'exécution de la requête
         Statement st = null;
@@ -91,7 +92,7 @@ public class bd {
         }
 
         //Requête SQL
-        String recupererUtilisateur = "SELECT NOMU, PRENOMU FROM UTILISATEUR";
+        String recupererUtilisateur = "SELECT NOMU, PRENOMU, STATUTU, DATEINSCRI FROM UTILISATEUR WHERE TYPEU = 'CLIENT'";
 
         //Ouverture de l'espace de requête
         ResultSet rs = null;
@@ -106,7 +107,7 @@ public class bd {
             while (rs.next()) {
                 listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"),
                         rs.getString("PRENOMU"), rs.getString("STATUTU"),
-                        rs.getDate("DATEINSCRI")));
+                        formatDate.parse(rs.getString("DATEINSCRI"))));
             }
         } catch (SQLException ex) {
             System.out.println("Echec lors de l'écriture dans la liste des messages " + ex.getMessage());
@@ -169,12 +170,12 @@ public class bd {
         }
 
         /*Commit de la modification de la base de donnére
-        try {
-            System.out.println("test du commit");
-            cx.commit();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors du commit d ela base de données "+ex.getMessage());
-        }*/
+         try {
+         System.out.println("test du commit");
+         cx.commit();
+         } catch (SQLException ex) {
+         System.out.println("Echec lors du commit d ela base de données "+ex.getMessage());
+         }*/
         //Fermeture de la connexion à la base de données
         try {
             cx.close();
@@ -217,12 +218,12 @@ public class bd {
         }
 
         /*Commit de la modification de la base de donnére
-        try {
-            System.out.println("test du commit");
-            cx.commit();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors du commit d ela base de données "+ex.getMessage());
-        }*/
+         try {
+         System.out.println("test du commit");
+         cx.commit();
+         } catch (SQLException ex) {
+         System.out.println("Echec lors du commit d ela base de données "+ex.getMessage());
+         }*/
         //Fermeture de la connexion à la base de données
         try {
             cx.close();
@@ -234,7 +235,7 @@ public class bd {
     }
 
     //Programme de test de la connexion à la bd
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ParseException {
         bd unebd = new bd();
 //        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
 //        Utilisateur u1 = new Utilisateur("Setilahy", "Sergio", 
@@ -245,10 +246,11 @@ public class bd {
 //        int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
 //        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
-//        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
-//        for (Utilisateur user : listeUtilisateur) {
-//            System.out.println(user.getNomu() + " " + user.getPrenomu());
-//        }
-        unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
+        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
+        for (Utilisateur user : listeUtilisateur) {
+            System.out.println(user.getNomu() + " " + user.getPrenomu() + " " 
+                + " " + user.getStatutu() + " " + user.getStringDate(user.getDateinscri()));
+       }
+        //unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
     }
 }
