@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=UTF-8">
+<title>Page accueil</title>
+<link href="inscription.css" rel="stylesheet"/>
+<SCRIPT language="JavaScript"  src="script.js">
+</script>
+</head>
+
+<body>
+<h1>Page d'accueil</h1>
+
+<form name="login" action="login.jsp" method="get">
+<table>
+<tr><td>Email d'utilisateur:</td>
+<td><input type="email" placeholder="Email d'utilisateur" name="txtemail" required>(*)</td></tr>
+<tr><td>Mot de passe:</td>
+<td><input type="password" placeholder="Mot de passe" name="txtmdp" required>(*)</td></tr>
+</form>
+<!--tr><td><small>Utilisez au moins une lettre, un chiffre et sept caractères</small></td></tr-->
+<tr><td><small><a href="mdpoublie.html" />Mot de passe oublié</small></td></tr>
+<tr><td id="envoyer" colspan="2"><input  type="submit" name="submit" value="Se connecter"/></td></tr>
+<tr><td>Si vous n'avez pas de compte</td></tr>
+<tr><td id="inscrire" colspan="2"><small><a href="inscription.jsp" />S'inscrire</small></td></tr>
+
+</table>
+
+</body>
+</html>
