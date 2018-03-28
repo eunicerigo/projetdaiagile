@@ -90,7 +90,7 @@
                                     <li>
                                         <div class="testimonial clearfix">
                                             <div class="mar-bot20">
-                                                <img alt="" src="img/testimonial/testimonial2.png" class="img-circle">
+                                                <img alt="" src="img/testimonial/coachsportif.jpg" class="img-circle">
                                             </div>
                                             <i class="fa fa-quote-left fa-5x"></i>
                                             <h5>
@@ -103,7 +103,7 @@
                                     <li>
                                         <div class="testimonial clearfix">
                                             <div class="mar-bot20">
-                                                <img alt="" src="img/testimonial/testimonial3.png" class="img-circle">
+                                                <img alt="" src="img/testimonial/coachsportif.jpg" class="img-circle">
                                             </div>
                                             <i class="fa fa-quote-left fa-5x"></i>
                                             <h5>
