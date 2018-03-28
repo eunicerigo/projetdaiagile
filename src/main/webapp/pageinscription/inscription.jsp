@@ -26,27 +26,27 @@
         <form name="Formulaires" method="post" onsubmit="return verifier()">
             <table>
                 <tr><td>Civilité:</td>
-                    <td><select name="civilite">
+                    <td><select name="civilite" id ="civilite">
                             <option value="Mme">Mme.</option>
                             <option value="M">M.</option>
                         </select>(*)</td>
                 </tr>
                 <tr><td>Nom:</td>
-                    <td><input type="text" name="Nom" required>(*)</td></tr>
+                    <td><input type="text" name="Nom" id ="Nom" required>(*)</td></tr>
                 <tr><td>Prénom:</td>
-                    <td><input type="text" name="Prenom" required>(*)</td></tr>
+                    <td><input type="text" name="Prenom" id ="Prenom" required>(*)</td></tr>
                 <tr><td>Date de naissance:</td>
-                    <td><input type="date" name="datene" placeholder="dd/mm/yyyy" required>(*)</td></tr>
+                    <td><input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" required>(*)</td></tr>
                 <tr><td>Numéro de téléphone:</td>
-                    <td><input type="text" name="numtele" id="telephone" pattern="[0-9]{10}" required>(*)</td></tr>
+                    <td><input type="text" name="tel" id="tel" pattern="[0-9]{10}" required>(*)</td></tr>
                 <tr><td>Adresse e-mail:</td>
-                    <td><input type="email" name="adrmail" required>(*)</td></tr>
+                    <td><input type="email" name="mail1" id="mail1" required>(*)</td></tr>
                 <tr><td>Confirmation e-mail:</td>
-                    <td><input type="email" name="adrmail" required>(*)</td></tr>
+                    <td><input type="email" name="mail2" id="mail2" required>(*)</td></tr>
                  <tr><td>Mot de passe:</td>
-                    <td><input type="password" name="mdp" required>(*)</td></tr>
+                    <td><input type="password" name="mdp" id = "mdp" required>(*)</td></tr>
                 <tr><td>Objectif:</td>
-                    <td><select name="obj">
+                    <td><select name="obj" id="obj">
                             <option value="objs">objectif sportif</option>
                             <option value="objm">objectif minceur</option>
                         </select>(*)</td>
@@ -57,11 +57,15 @@
                     <tr><td>Numéro de carte:</td>
                     <td><input type="text" name="userName" id="carte" pattern="[0-9]{16}" required>(*)</td></tr>  -->
             </table>
+            
+             <!--
             <p><input type="checkbox" name="userName" value="Je souhaite recevoir des messages de gymnase."/>Je souhaite recevoir des messages de gymnase.</p>
             <p><input type="checkbox" name="userName" value="Je m'inscris pour au moins trois mois"/required>Je m'inscris pour au moins trois mois(*)</p>
             <p><input type="checkbox" name="userName" value="J'ai lu les conditions générales de gymnase"/required>J'ai lu les conditions générales de gymnase(*)</p>
             <p><input type="submit" onClick="JavaScript:alert('Le message va être envoyé');" value="Envoyer"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Effacer"/></p>
-
+             
+             -->
+             
         </form>
         
  </body>
