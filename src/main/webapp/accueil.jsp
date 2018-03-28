@@ -153,7 +153,6 @@
                         <p>Copyright &copy; All rights reserved</p>
                     </div>
                 </div>
-
             </div>
         </section>
     </body>
