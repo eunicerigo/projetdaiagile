@@ -79,9 +79,21 @@
                                                 <img alt="" src="Vlava/img/testimonial/coachsportif.jpg" class="img-circle">
                                             </div>
                                             <i class="fa fa-quote-left fa-5x"></i>
-                                            <h5>Jean-David</h5>
+                                            <h5>Profil programme sportif</h5>
                                             <br/>
-                                            <h5>Coach professionnel, Toulouse agglomération</h5>
+                                            <h5>Besoin de devenir plus sportif? Choisissez celui-ci!</h5>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="testimonial clearfix">
+                                            <div class="mar-bot20">
+                                                <img alt="" src="Vlava/img/testimonial/majiaxian.jpg" class="img-circle">
+                                            </div>
+                                            <i class="fa fa-quote-left fa-5x"></i>
+                                            <h5>Profil programme minceur</h5>
+                                            <br/>
+                                            <h5>Besoin de minceur? Choisissez celui-ci!</h5>
                                         </div>
                                     </li>
                                 </ul>
