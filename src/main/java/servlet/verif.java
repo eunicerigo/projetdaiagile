@@ -42,7 +42,7 @@ public class verif extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             RequestDispatcher rd = null;
             //GET Utilisateur
-            String email = request.getParameter("txtemai");
+            String email = request.getParameter("txtemail");
             String mdp = request.getParameter("txtmdp");
             bd unebd = new bd();
             int rs = unebd.verifLogin(email, mdp);
