@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import bd.bd;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -12,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import metier.Utilisateur;
 
 /**
  *
@@ -30,11 +32,25 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
         response.setContentType("application/xml;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         
         
+        String genre = request.getParameter("genre");
+        String nom = request.getParameter("nom");
+        String prenom = request.getParameter("prenom");    
+        String datenaissance = request.getParameter("datenaissance");    
+        String tel = request.getParameter("tel");
+        String mail1 = request.getParameter("mail1");
+        String mdp = request.getParameter("mdp");
+        String obj = request.getParameter("obj");
+        
+        
+       //Utilisateur ut1  = new Utilisateur(nom,prenom,mail1,mdp,genre,datenaissance,tel,"CLIENT",obj,,"potentiel");
+        
+      //  bd newbd = new bd(); 
+        
+      //  newbd.inscrirebaseutilisateur(new Utilisateur());
         
         
         
