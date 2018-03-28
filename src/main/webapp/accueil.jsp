@@ -86,33 +86,6 @@
                                             <span class="author">&mdash; SARAH DOE <a href="#">www.siteurl.com</a></span>
                                         </div>
                                     </li>
-
-                                    <li>
-                                        <div class="testimonial clearfix">
-                                            <div class="mar-bot20">
-                                                <img alt="" src="Vlava/img/testimonial/coachsportif.jpg" class="img-circle">
-                                            </div>
-                                            <i class="fa fa-quote-left fa-5x"></i>
-                                            <h5>
-                                                Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-                                            </h5>
-                                            <br/>
-                                            <span class="author">&mdash; NICOLE DOE <a href="#">www.siteurl.com</a></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="testimonial clearfix">
-                                            <div class="mar-bot20">
-                                                <img alt="" src="Vlava/img/testimonial/coachsportif.jpg" class="img-circle">
-                                            </div>
-                                            <i class="fa fa-quote-left fa-5x"></i>
-                                            <h5>
-                                                Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
-                                            </h5>
-                                            <br/>
-                                            <span class="author">&mdash; DASON KRUN <a href="#">www.siteurl.com</a></span>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
