@@ -47,6 +47,36 @@ public class bd {
             System.out.println("Echec lors de la tentative de connexion à la bd" + ex.getMessage());
         }
     }
+    
+        public int verifLogin(String email, String mdp) throws SQLException {
+        Statement st;
+        int rs1 = 0;
+
+        String sql = "select TYPEU from UTILISATEUR where MAILU='" + email + "' and MDPU = '" + mdp + "'";
+        st = cx.createStatement();
+        ResultSet rs = st.executeQuery(sql); //resultat
+
+        //verifier
+        if (rs.next()) {
+            System.out.println("connect ok");
+            //ok
+            String type = rs.getString(1);
+
+            if (type == "COACH") {
+                rs1 = 1;
+            } else if (type == "CLIENT") {
+                rs1 = 2;
+            } else if (type == "ADMIN") {
+                rs1 = 3;
+            }
+        }
+         else //ko
+        {
+            rs1 = 4;
+        }
+        return rs1;
+
+    }
 
     //Methode de récuperration des utilisateurs
     public ArrayList<Utilisateur> obtenirutilisateurs() {
