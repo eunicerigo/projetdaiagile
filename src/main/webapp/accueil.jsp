@@ -113,20 +113,18 @@
                     <div class="col-md-offset-3 col-md-6">
                         <div class="section-header">
                             <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-                            <ul>
-                                <li>
-                                    Admin: <a href="mailto:yiqingshao19940903@gmail.com">yiqingshao19940903@gmail.com</a>
-                                </li>
-                                <li>
-                                    Coach: <a href="mailto:flexic.s@hotmail.com">flexic.s@hotmail.com</a>
-                                </li>
-                            </ul>
                         </div>
+                        <ul>
+                            <li>
+                                Admin: <a href="mailto:yiqingshao19940903@gmail.com">yiqingshao19940903@gmail.com</a>
+                            </li>
+                            <li>
+                                Coach: <a href="mailto:flexic.s@hotmail.com">flexic.s@hotmail.com</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row">
 
-                </div>
             </div>
         </section>
 
