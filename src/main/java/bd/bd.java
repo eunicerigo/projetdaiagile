@@ -74,7 +74,9 @@ public class bd {
         //Ecriture des résultats de la requête dans la liste des messages
         try {
             while (rs.next()) {
-                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"), rs.getString("PRENOMU")));
+                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"), 
+                    rs.getString("PRENOMU"), rs.getString("STATUTU"), 
+                    rs.getDate("DATEINSCRI")));
             }
         } catch (SQLException ex) {
             System.out.println("Echec lors de l'écriture dans la liste des messages " + ex.getMessage());
@@ -205,8 +207,10 @@ public class bd {
     public static void main(String[] args) throws ParseException {
         bd unebd = new bd();
         SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
-        Utilisateur u1 = new Utilisateur(1, "Setilahy", "Sergio", "sergio@example.com", 
-                "12test", "M", "01-23-45-67-89" );
+        Utilisateur u1 = new Utilisateur("Setilahy", "Sergio", 
+            "sergio@example.com", "12test", "M", 
+            formatDate.parse("27/09/1990"), "01-23-45-67-89", 
+            "Client", new Date(), "Potentiel");
 
         int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
