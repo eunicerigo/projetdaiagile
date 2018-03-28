@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import metier.Utilisateur;
 
-
-
 /**
  *
  * @author 21101690
@@ -47,10 +45,11 @@ public class bd {
             System.out.println("Echec lors de la tentative de connexion à la bd" + ex.getMessage());
         }
     }
-    
-        public int verifLogin(String email, String mdp) throws SQLException {
+
+    public int verifLogin(String email, String mdp) throws SQLException {
         Statement st;
         int rs1 = 0;
+
 
         String sql = "select TYPEU from UTILISATEUR where MAILU='" + email + "' and MDPU = '" + mdp + "'";
         st = cx.createStatement();
@@ -61,20 +60,21 @@ public class bd {
             System.out.println("connect ok");
             //ok
             String type = rs.getString("TYPEU");
-
-            if (type == "COACH") {
+            if (type.equals("COACH")) {
                 rs1 = 1;
-            } else if (type == "CLIENT") {
+                System.out.println("COACH");
+            } else if (type.equals("CLIENT")) {
                 rs1 = 2;
-            } else if (type == "ADMIN") {
+                System.out.println("CLIENT");
+            } else if (type.equals("ADMIN")) {
                 rs1 = 3;
+                System.out.println("admin");
             }
-        }
-         else //ko
+        } else //ko
         {
             rs1 = 4;
         }
-        return rs1;
+       return rs1;
 
     }
 
@@ -104,9 +104,9 @@ public class bd {
         //Ecriture des résultats de la requête dans la liste des messages
         try {
             while (rs.next()) {
-                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"), 
-                    rs.getString("PRENOMU"), rs.getString("STATUTU"), 
-                    rs.getDate("DATEINSCRI")));
+                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"),
+                        rs.getString("PRENOMU"), rs.getString("STATUTU"),
+                        rs.getDate("DATEINSCRI")));
             }
         } catch (SQLException ex) {
             System.out.println("Echec lors de l'écriture dans la liste des messages " + ex.getMessage());
@@ -147,11 +147,11 @@ public class bd {
 
         //Requête SQL
         String inscrirebase = "INSERT INTO UTILISATEUR "
-        + "(CODEU, NOMU, PRENOMU, MAILU, MDPU, GENREU, TELU) "
-        + "VALUES ('" + lutilisateur.getCodeu() + "','" + lutilisateur.getNomu() + "','"
-        + lutilisateur.getPrenomu() + "','" + lutilisateur.getMailu() + "','" + lutilisateur.getMdpu() + "','"
-        + lutilisateur.getGenreu() + "','" + lutilisateur.getTelu()
-        + "');";
+                + "(CODEU, NOMU, PRENOMU, MAILU, MDPU, GENREU, TELU) "
+                + "VALUES ('" + lutilisateur.getCodeu() + "','" + lutilisateur.getNomu() + "','"
+                + lutilisateur.getPrenomu() + "','" + lutilisateur.getMailu() + "','" + lutilisateur.getMdpu() + "','"
+                + lutilisateur.getGenreu() + "','" + lutilisateur.getTelu()
+                + "');";
 
         int nb_ligne_modifie = 0;
         try {
@@ -192,20 +192,20 @@ public class bd {
             st = cx.createStatement();
         } catch (SQLException ex) {
             System.out.println("Echec lors de la création de l'espace "
-                + "d'exécution " + ex.getMessage());
+                    + "d'exécution " + ex.getMessage());
         }
 
         //Requête SQL
-        String inscrirebase = "DELETE FROM UTILISATEUR WHERE MAILU = '" 
-            + lutilisateur.getMailu() + "';";
+        String inscrirebase = "DELETE FROM UTILISATEUR WHERE MAILU = '"
+                + lutilisateur.getMailu() + "';";
 
         int nb_ligne_modifie = 0;
         try {
             //Ouverture de l'espace de requête
             nb_ligne_modifie = st.executeUpdate(inscrirebase);
         } catch (SQLException ex) {
-            System.out.println("Echec lors de l'insertion de l'utilisateur " 
-                + ex.getMessage());
+            System.out.println("Echec lors de l'insertion de l'utilisateur "
+                    + ex.getMessage());
         }
 
         //Fermeture de l'espace d'exécution de la requête
@@ -213,7 +213,7 @@ public class bd {
             st.close();
         } catch (SQLException ex) {
             System.out.println("Echec lors de la fermeture de l'espace "
-                + "d'exécution de la requête " + ex.getMessage());
+                    + "d'exécution de la requête " + ex.getMessage());
         }
 
         /*Commit de la modification de la base de donnére
@@ -228,13 +228,13 @@ public class bd {
             cx.close();
         } catch (SQLException ex) {
             System.out.println("Echec lors de la fermeture de la connexion à la "
-                + "base de données " + ex.getMessage());
+                    + "base de données " + ex.getMessage());
         }
         return nb_ligne_modifie;
     }
 
     //Programme de test de la connexion à la bd
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws SQLException {
         bd unebd = new bd();
 //        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
 //        Utilisateur u1 = new Utilisateur("Setilahy", "Sergio", 
@@ -245,12 +245,10 @@ public class bd {
 //        int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
 //        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
-        
-        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
-        for (Utilisateur user : listeUtilisateur) {
-            System.out.println(user.getNomu() + " " + user.getPrenomu());
-        }
-        
-      //  unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
+//        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
+//        for (Utilisateur user : listeUtilisateur) {
+//            System.out.println(user.getNomu() + " " + user.getPrenomu());
+//        }
+        unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
     }
 }
