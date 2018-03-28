@@ -38,7 +38,7 @@ function InscrireUtilisateur(){
     //xhr.onreadystatechange = function(){     
     //}
     
-    
+    var i = 1;
     
 }
 
