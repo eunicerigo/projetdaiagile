@@ -66,7 +66,7 @@
         </section>
 
         <!-- apercu -->
-        <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
+        <section id="section-image" class="section" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
