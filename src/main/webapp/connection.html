@@ -40,7 +40,8 @@ and open the template in the editor.
                         <div class="section-header">
                             <h2 class="section-heading animated" data-animation="bounceInUp">Log In</h2>
                         </div>
-                        <form name="login" action="login.jsp" method="get">
+                        <div class="cform" id="contact-form">
+                        <form name="login" action="login.jsp" method="get" class="contactForm">
                             <div class="field your-email form-group">
                                 Email d'utilisateur:
                                 <input type="email" placeholder="Email d'utilisateur" 
@@ -55,12 +56,13 @@ and open the template in the editor.
                             <div><a href="mdpoublie.html" />Mot de passe oublié</div>
                             <div class="send-btn">
                             <input  type="submit" name="submit" value="Se connecter" class="btn btn-theme"/>
+                       
                             </div>
-                            <div>Si vous n'avez pas de compte
-                            <a href="inscription.jsp" />S'inscrire</div>
-
-
-                        </form>
+                            <div>Si vous n'avez pas de compte</div>
+                            <div><a href="inscription.jsp"/>S'inscrire</div>
+                        
+                        </form>  
+                    </div>
                     </div>
                 </div>
             </div>
