@@ -51,15 +51,15 @@ public class verif extends HttpServlet {
             //COACH
             if (rs == 1) {
                 out.println("coach Login succes!!!");
-                rd = request.getRequestDispatcher("");// il faut changer adresse
+                rd = request.getRequestDispatcher("index.jsp");// il faut changer adresse
             } //CLIENT
             else if (rs == 2) {
                 out.println(" client Login sucess!!!");
-                rd = request.getRequestDispatcher("");// il faut changer adresse
+                rd = request.getRequestDispatcher("inscription.jsp");// il faut changer adresse
             } //ADMIN
             else if (rs == 3) {
                 out.println(" admin Login sucess!!!");
-                rd = request.getRequestDispatcher("");// il faut changer adresse
+                rd = request.getRequestDispatcher("accueil.jsp");// il faut changer adresse
             } else //ko
             {
                 out.println("<script LANGUAGE='JavaScript'>");
