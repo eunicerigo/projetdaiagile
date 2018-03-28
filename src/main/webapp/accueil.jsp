@@ -41,25 +41,27 @@
         <div class="navbar-header">
         </div>
             
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-      <li><a href="#section-about">Home</a></li>
-      <li><a href="#section-image">Apercu</a></li>
-      <li><a href="#section-contact">Contact</a></li>
-    </ul>
-  </div>
-  <!--/.navbar-collapse -->
-</div>
-</div>
-        <section id="intro">
-    <div class="intro-content">
-      <h2>Welcome to Vlava!</h2>
-      <h3>Lorem ipsum dolor sit amet, elit persecuti efficiendi</h3>
-      <div>
-        <a href="#section-services" class="btn-get-started scrollto">Get Started</a>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+            <li><a href="#section-about">Home</a></li>
+            <li><a href="#section-image">Apercu</a></li>
+            <li><a href="#section-contact">Contact</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
       </div>
-    </div>
-  </section>
+      </div>
+        <section id="intro">
+          <div class="intro-content">
+            <h2>JEAN DAVID COACHING</h2>
+            <h3>Bienvenue!</h3>
+            <div>
+              <a href="login.jsp" class="btn-get-started scrollto">LOG IN</a>
+              <a href="#section-services" class="btn-get-started scrollto">INSCRIRE</a>
+            </div>
+          </div>
+        </section>
+        
     </body>
     </html>
 </f:view>
