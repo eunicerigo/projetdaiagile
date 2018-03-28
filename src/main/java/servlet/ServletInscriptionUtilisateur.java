@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,8 +63,17 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
         
        bd newbd = new bd(); 
        
-       newbd.inscrirebaseutilisateur(ut1) ;
+       int i = newbd.inscrirebaseutilisateur(ut1) ;
        
+       if ( i != 0 ){
+           
+            RequestDispatcher rd = null;
+            
+              rd = request.getRequestDispatcher("testEunice.html");// il faut changer adresse
+              rd.forward(request, response);
+            
+           
+       }
               
     }
 }

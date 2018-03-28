@@ -47,7 +47,7 @@
                             <h3>Les informations suivies d'un astérisque sont obligatoires.</h3>
                         </div>
                         <div class="cform" id="contact-form">
-                            <form name="Formulaires" method="post" onsubmit="return verifier()">
+                            <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
                                     Civilité: <select name="genre" id ="genre">
                                         <option value="H">Homme.</option>

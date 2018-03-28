@@ -41,6 +41,9 @@ function getXMLHttpRequest()
 
 function inscrireUtilisateur(){
     var xhr = getXMLHttpRequest();
+    //ou ca 
+    // var xhr = XMLHttpRequest();
+    
     
     var civ = "genre=" + document.getElementById("genre").value;
     var nom = "nom=" + document.getElementById("nom").value;
@@ -53,6 +56,14 @@ function inscrireUtilisateur(){
      var obj = "obj=" + document.getElementById("obj").value;
      
      
+     requeteXML.onreadystatechange = function ()
+    {
+        //Si l'on a tout reçu et que la requête http s'est bien passée.
+        if (requeteXML.readyState === 4 && requeteXML.status === 200) {
+            processKey();
+        }
+    };
+     
 
     xhr.open("get", "ServeletInscriptionUtilisateur?genre=" + genre.value());
     xhr.open("get", "ServeletInscriptionUtilisateur?nom=" + nom.value());
@@ -63,6 +74,7 @@ function inscrireUtilisateur(){
     xhr.open("get", "ServeletInscriptionUtilisateur?mdp=" + mdp.value());
     xhr.open("get", "ServeletInscriptionUtilisateur?obj=" + obj.value());
 
+    requeteXML.send(null);
     
 
      
