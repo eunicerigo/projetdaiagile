@@ -58,7 +58,7 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
         String obj = request.getParameter("obj");
         
         
-       Utilisateur ut1  = new Utilisateur(nom,prenom,obj,mail1,mdp,genre,datenaissance,tel,"CLIENT",datenaissance,"Potentiel");
+      // Utilisateur ut1  = new Utilisateur(nom,prenom,obj,mail1,mdp,genre,datenaissance,tel,"CLIENT",datenaissance,"Potentiel");
         
        bd newbd = new bd(); 
         
