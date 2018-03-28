@@ -44,6 +44,7 @@
                     </button>
                 </div>
 
+                <!-- Menu en haut -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                         <li><a href="#section-about">Home</a></li>
@@ -51,9 +52,10 @@
                         <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </div>
-                <!--/.navbar-collapse -->
             </div>
         </div>
+
+        <!-- Bienvenue -->
         <section id="intro">
             <div class="intro-content">
                 <h2>JEAN DAVID COACHING</h2>
@@ -65,7 +67,7 @@
             </div>
         </section>
 
-        <!-- apercu -->
+        <!-- Apercu -->
         <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row">
@@ -100,7 +102,29 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- contact -->
+        <section id="section-contact" class="section appear clearfix">
+            <div class="container">
+                <div class="row mar-bot40">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div class="section-header">
+                            <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>
+                            Admin: <a href="mailto:yiqingshao19940903@gmail.com">yiqingshao19940903@gmail.com</a>
+                        </li>
+                        <li>
+                            Coach: <a href="mailto:flexic.s@hotmail.com">flexic.s@hotmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
