@@ -7,6 +7,6 @@
 <br>
 <a href="accueil.jsp">accueil</a>
 <br>
-<a href="inscription.jsp">accueil</a>
+<a href="inscription.jsp">inscription</a>
 </body>
 </html>
