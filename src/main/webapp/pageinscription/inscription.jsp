@@ -11,67 +11,79 @@
         <meta http-equiv="Content-Type"
               content="text/html; charset=UTF-8">
         <title>Inscription client</title>
-        <link href="inscription.css" rel="stylesheet"/>
-        <SCRIPT language="JavaScript"  src="script.js">
-        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" 
+              href="Vlava/js/rs-plugin/css/settings.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="Vlava/css/isotope.css" media="screen">
+        <link rel="stylesheet" 
+              href="flexslider.css" type="text/css">
+        <link rel="stylesheet" href="Vlava/js/jquery.fancybox.css" type="text/css" 
+              media="screen">
+        <link rel="stylesheet" href="Vlava/css/bootstrap.css">
+        <link rel="stylesheet" 
+              href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
+        <link rel="stylesheet" href="Vlava/css/style.css">
+        <!-- skin -->
+        <link rel="stylesheet" href="Vlava/css/default.css">
+        <SCRIPT language="JavaScript"  src="script.js"></script>
     </head>
 
     <body>
 
 
-        <h1>Inscrivez vos coordonnées:</h1>
-        <h2>Les informations suivies d'un astérisque sont obligatoires.</h2>
+        <section id="intro">
+            <div class="intro-content">
+                <h2>JEAN DAVID COACHING</h2>
+                <h3>Page Inscription</h3>
+            </div>
+        </section>
+
+        <section id="section-contact" class="section appear clearfix">
+            <div class="container">
+                <div class="row mar-bot40">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div class="section-header">
+                            <h2 class="section-heading animated" data-animation="bounceInUp">Inscrivez vos coordonnées</h2>
+                            <h3>Les informations suivies d'un astérisque sont obligatoires.</h3>
+                        </div>
+                        <div class="cform" id="contact-form">
+                            <form name="Formulaires" method="post" onsubmit="return verifier()">
+                                <div name='civilite'>
+                                    Civilité: <select name="civilite" id ="civilite">
+                                        <option value="Mme">Mme.</option>
+                                        <option value="M">M.</option>
+                                    </select>(*)
+                                </div>
+
+                                <div class="field your-name form-group">
+                                    Nom:<input type="text" name="Nom" id ="nom" placeholder="Nom" class="cform-text" size="40" required>(*)
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="field your-name form-group">
+                                    Prénom:<input type="text" name="Prenom" id ="prenom" placeholder="Prénom" class="cform-text" size="40" required>(*)
+                                    <div class="validation"></div>
+                                </div>
+                                    Date de naissance:<input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" required>(*)
+                                    Numéro de téléphone:<input type="text" name="tel" id="tel" pattern="[0-9]{10}" required>(*)
+                                    Adresse e-mail:<input type="email" name="mail1" id="mail1" required>(*)
+                                    Confirmation e-mail:<input type="email" name="mail2" id="mail2" required>(*)
+                                    Mot de passe:<input type="password" name="mdp" id = "mdp" required>(*)
+                                    Objectif:<select name="obj" id="obj">
+                                        <option value="objs">objectif sportif</option>
+                                        <option value="objm">objectif minceur</option>
+                                    </select>(*)
+
+                                    <p><input type="submit" onClick="inscrireUtilisateur()" value="Envoyer"/>
+
+                                        <input type="reset" value="Effacer"/></p>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-        <form name="Formulaires" method="post" onsubmit="return verifier()">
-            <table>
-                <tr><td>Civilité:</td>
-                    <td><select name="civilite" id ="civilite">
-                            <option value="Mme">Mme.</option>
-                            <option value="M">M.</option>
-                        </select>(*)</td>
-                </tr>
-                <tr><td>Nom:</td>
-                    <td><input type="text" name="Nom" id ="nom" required>(*)</td></tr>
-                <tr><td>Prénom:</td>
-                    <td><input type="text" name="Prenom" id ="prenom" required>(*)</td></tr>
-                <tr><td>Date de naissance:</td>
-                    <td><input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" required>(*)</td></tr>
-                <tr><td>Numéro de téléphone:</td>
-                    <td><input type="text" name="tel" id="tel" pattern="[0-9]{10}" required>(*)</td></tr>
-                <tr><td>Adresse e-mail:</td>
-                    <td><input type="email" name="mail1" id="mail1" required>(*)</td></tr>
-                <tr><td>Confirmation e-mail:</td>
-                    <td><input type="email" name="mail2" id="mail2" required>(*)</td></tr>
-                 <tr><td>Mot de passe:</td>
-                    <td><input type="password" name="mdp" id = "mdp" required>(*)</td></tr>
-                <tr><td>Objectif:</td>
-                    <td><select name="obj" id="obj">
-                            <option value="objs">objectif sportif</option>
-                            <option value="objm">objectif minceur</option>
-                        </select>(*)</td>
-                    <!-- <tr><td>Moyen de paiement:</td>
-                    <td><input type="radio" name="userName" value="Carte Bleue"/required>Carte Bleue
-                    <input type="radio" name="userName" value="Visa"/required>Visa
-                    <input type="radio" name="userName" value="American Express"/required>American Express(*)</td></tr>
-                    <tr><td>Numéro de carte:</td>
-                    <td><input type="text" name="userName" id="carte" pattern="[0-9]{16}" required>(*)</td></tr>  -->
-            </table>
-            
-             <!--
-            <p><input type="checkbox" name="userName" value="Je souhaite recevoir des messages de gymnase."/>Je souhaite recevoir des messages de gymnase.</p>
-            <p><input type="checkbox" name="userName" value="Je m'inscris pour au moins trois mois"/required>Je m'inscris pour au moins trois mois(*)</p>
-            <p><input type="checkbox" name="userName" value="J'ai lu les conditions générales de gymnase"/required>J'ai lu les conditions générales de gymnase(*)</p>
-              -->
-            <p><input type="submit" onClick="inscrireUtilisateur()" value="Envoyer"/>
-            
-                
-                
-            <input type="reset" value="Effacer"/></p>
-             
-            
-             
-        </form>
-        
- </body>
+    </body>
 </html>
