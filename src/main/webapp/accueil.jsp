@@ -145,7 +145,7 @@
                     <ul class="footer-menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#testimonials">Apercu</a></li>
-                        <li><<a href="#section-contact">Contact</a></li>
+                        <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="row align-center copyright">
