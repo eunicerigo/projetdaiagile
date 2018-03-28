@@ -47,7 +47,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                         <li><a href="#section-about">Home</a></li>
-                        <li><a href="#section-image">Apercu</a></li>
+                        <li><a href="#testimonials">Apercu</a></li>
                         <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </div>
@@ -66,7 +66,7 @@
         </section>
 
         <!-- apercu -->
-        <section id="section-image" class="section" data-stellar-background-ratio="0.5">
+        <section id="testimonials" class="section" data-stellar-background-ratio="0.5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
