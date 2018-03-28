@@ -32,9 +32,9 @@
                         </select>(*)</td>
                 </tr>
                 <tr><td>Nom:</td>
-                    <td><input type="text" name="Nom" id ="Nom" required>(*)</td></tr>
+                    <td><input type="text" name="Nom" id ="nom" required>(*)</td></tr>
                 <tr><td>Prénom:</td>
-                    <td><input type="text" name="Prenom" id ="Prenom" required>(*)</td></tr>
+                    <td><input type="text" name="Prenom" id ="prenom" required>(*)</td></tr>
                 <tr><td>Date de naissance:</td>
                     <td><input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" required>(*)</td></tr>
                 <tr><td>Numéro de téléphone:</td>
@@ -62,9 +62,14 @@
             <p><input type="checkbox" name="userName" value="Je souhaite recevoir des messages de gymnase."/>Je souhaite recevoir des messages de gymnase.</p>
             <p><input type="checkbox" name="userName" value="Je m'inscris pour au moins trois mois"/required>Je m'inscris pour au moins trois mois(*)</p>
             <p><input type="checkbox" name="userName" value="J'ai lu les conditions générales de gymnase"/required>J'ai lu les conditions générales de gymnase(*)</p>
-            <p><input type="submit" onClick="JavaScript:alert('Le message va être envoyé');" value="Envoyer"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="Effacer"/></p>
+              -->
+            <p><input type="submit" onClick="inscrireUtilisateur()" value="Envoyer"/>
+            
+                
+                
+            <input type="reset" value="Effacer"/></p>
              
-             -->
+            
              
         </form>
         
