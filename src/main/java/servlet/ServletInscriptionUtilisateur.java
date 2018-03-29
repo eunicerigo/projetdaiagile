@@ -62,22 +62,28 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
        Utilisateur ut1  = new Utilisateur(nom,prenom,mail1,mdp,genre,datenaissance,tel,"CLIENT",datenaissance,"Potentiel");
         
        bd newbd = new bd(); 
-       String url = "testEunice.html"; 
-         RequestDispatcher rd ;
+       
        
        int i = newbd.inscrirebaseutilisateur(ut1) ;
        
-       if ( i != 0 ){  
-           url = "testEunice.jsp";            
-       } else {
-           url= "testEunice2.jsp";
-    
-       }
        
-       rd = request.getRequestDispatcher(url);
-       rd.forward(request, response);
-    
-    
+       
+       String url = "testEunice.html"; 
+       RequestDispatcher rd ;
+       
+       
+//       
+//       if ( i != 0 ){  
+//           url = "testEunice.jsp";            
+//       } else {
+//           url= "testEunice2.jsp";
+//    
+//       }
+//       
+//       rd = request.getRequestDispatcher(url);
+//       rd.forward(request, response);
+//    
+//    
     
     }
 
