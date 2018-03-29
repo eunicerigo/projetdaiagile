@@ -69,7 +69,7 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
            
             RequestDispatcher rd = null;
             
-              rd = request.getRequestDispatcher("testEunice.html");// il faut changer adresse
+              rd = request.getRequestDispatcher("testEunice.html");// 
               rd.forward(request, response);
             
            

@@ -45,10 +45,10 @@ function inscrireUtilisateur(){
     // var xhr = XMLHttpRequest();
     
     
-    var civ = "genre=" + document.getElementById("genre").value;
+    var genre = "genre=" + document.getElementById("genre").value;
     var nom = "nom=" + document.getElementById("nom").value;
     var prenom = "prenom=" + document.getElementById("prenom").value;
-    var date = "date=" + document.getElementById("date").value;
+    var datenaissance = "date=" + document.getElementById("date").value;
     var tel = "tel=" + document.getElementById("tel").value;
     var mail1 = "mail1=" + document.getElementById("mail1").value;
      var mail2 = "mail2=" + document.getElementById("mail2").value;
@@ -65,14 +65,14 @@ function inscrireUtilisateur(){
     };
      
 
-    xhr.open("get", "ServeletInscriptionUtilisateur?genre=" + genre.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?nom=" + nom.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?prenom=" + prenom.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?datenaissance=" + datenaissance.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?tel=" + tel.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?mail1=" + mail1.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?mdp=" + mdp.value());
-    xhr.open("get", "ServeletInscriptionUtilisateur?obj=" + obj.value());
+    xhr.open("get", "ServeletInscriptionUtilisateur?genre=" + genre);
+    xhr.open("get", "ServeletInscriptionUtilisateur?nom=" + nom);
+    xhr.open("get", "ServeletInscriptionUtilisateur?prenom=" + prenom);
+    xhr.open("get", "ServeletInscriptionUtilisateur?datenaissance=" + datenaissance);
+    xhr.open("get", "ServeletInscriptionUtilisateur?tel=" + tel);
+    xhr.open("get", "ServeletInscriptionUtilisateur?mail1=" + mail1);
+    xhr.open("get", "ServeletInscriptionUtilisateur?mdp=" + mdp);
+    xhr.open("get", "ServeletInscriptionUtilisateur?obj=" + obj);
 
     requeteXML.send(null);
     
