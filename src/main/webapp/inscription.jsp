@@ -96,7 +96,7 @@
                                         <option value="objm">objectif minceur</option>
                                     </select>(*)
 
-                                    <p><input type="submit" onClick="inscrireUtilisateur()" value="Envoyer"/>
+                                    <p><input type="submit" onClick="ServletInscriptionUtilisateur()" value="Envoyer"/>
 
                                         <input type="reset" value="Effacer"/></p>
 
