@@ -67,12 +67,14 @@
                     <div class="col-md-offset-3 col-md-6">
                         <div class="section-header">
                             <h2 class="section-heading animated" data-animation="bounceInUp">Inscrivez vos coordonnées</h2>
-                            <h3>Les informations suivies d'un astérisque sont obligatoires.</h3>
+                            <h4>Les informations suivies d'un astérisque sont obligatoires.</h4>
                         </div>
+                        
                         <div class="cform" id="contact-form">
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
-                                    Genre: <select name="genre" id ="genre">
+                                    Genre: 
+                                    <select name="genre" id ="genre"class="form-control-static">
                                         <option value="H">Homme.</option>
                                         <option value="F">Femme.</option>
                                     </select>(*)
@@ -86,15 +88,33 @@
                                     Prénom:<input type="text" name="Prenom" id ="prenom" placeholder="Prénom" class="cform-text" size="40" required>(*)
                                     <div class="validation"></div>
                                 </div>
-                                    Date de naissance:<input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" required>(*)
-                                    Numéro de téléphone:<input type="text" name="tel" id="tel" pattern="[0-9]{10}" required>(*)
-                                    Adresse e-mail:<input type="email" name="mail1" id="mail1" required>(*)
-                                    Confirmation e-mail:<input type="email" name="mail2" id="mail2" required>(*)
-                                    Mot de passe:<input type="password" name="mdp" id = "mdp" required>(*)
-                                    Objectif:<select name="obj" id="obj">
+                                <div>
+                                    Date de naissance:
+                                    <input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" class="cform-text" size="40" required>(*)
+                                </div>
+                                <div>
+                                    Numéro de téléphone:
+                                    <input type="text" name="tel" id="tel" pattern="[0-9]{10}" class="cform-text" size="40" required>(*)
+                                </div>
+                                <div class="field your-email form-group">
+                                    Adresse Email:
+                                    <input type="email" name="mail1" id="mail1" placeholder="Email" class="cform-text" size="40" required>(*)
+                                </div>
+                                <div class="field your-email form-group">
+                                    Confirmation Email:
+                                    <input type="email" name="mail2" id="mail2" placeholder="Confirmation Email" class="cform-text" size="40" required>(*)
+                                </div>
+                                <div>
+                                    Mot de passe:
+                                    <input type="password" name="mdp" id = "mdp" class="cform-text" size="40" required>(*)
+                                </div>
+                                <div>
+                                    Objectif:
+                                    <select name="obj" id="obj" class="form-control-static">
                                         <option value="objs">objectif sportif</option>
                                         <option value="objm">objectif minceur</option>
                                     </select>(*)
+                                </div>
 
                                     <p><input type="submit" onClick="ServletInscriptionUtilisateur()" value="Envoyer"/>
 
