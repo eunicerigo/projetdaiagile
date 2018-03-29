@@ -74,7 +74,7 @@
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
                                     Genre : (*)
-                                    <select name="genre" id ="genre"class="form-control-static">
+                                    <select name="genre" id ="genre"class="form-control-feedback">
                                         <option value="H">Homme.</option>
                                         <option value="F">Femme.</option>
                                     </select>
@@ -110,13 +110,13 @@
                                     Confirmation Email:
                                     <input type="email" name="mail2" id="mail2" placeholder="Confirmation Email" class="cform-text" size="40" required>(*)
                                 </div>
-                                <div>
+                                <div class="field your-name form-group">
                                     Mot de passe:
                                     <input type="password" name="mdp" id = "mdp" class="cform-text" size="40" required>(*)
                                 </div>
                                 <div>
                                     Objectif:
-                                    <select name="obj" id="obj" class="form-control-static">
+                                    <select name="obj" id="obj" class="form-control-feedback">
                                         <option value="objs">objectif sportif</option>
                                         <option value="objm">objectif minceur</option>
                                     </select>(*)
