@@ -47,7 +47,7 @@
                     <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
                         <li><a href="accueil.jsp">Home</a></li>
                         <li><a href="accueil.jsp#testimonials">Apercu</a></li>
-                        <li><a href="#section-contact">Contact</a></li>
+                        <li><a href="accueil.jsp#section-contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        <section id="section-contact" class="section appear clearfix">
+        <section id="section-inscription" class="section appear clearfix">
             <div class="container">
                 <div class="row mar-bot40">
                     <div class="col-md-offset-3 col-md-6">
