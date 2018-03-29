@@ -92,9 +92,9 @@
                                     <div class="validation"></div>
                                 </div>
                                 
-                                <div class="field your-name form-group">
+                                <div>
                                     Date de naissance : (*)
-                                    <input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" class="cform-text" size="40" required>
+                                    <input type="text" name="date" id ="date" placeholder="dd/mm/yyyy" class="cform-text" size="40" required>
                                 </div>
                                 
                                 <div>
