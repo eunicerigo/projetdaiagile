@@ -9,17 +9,17 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <f:view>
-<html>
-    <head>
-        <meta http-equiv="Content-Type"
-              content="text/html; charset=UTF-8">
-        <title>Inscription client</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html>
+        <head>
+            <meta http-equiv="Content-Type"
+                  content="text/html; charset=UTF-8">
+            <title>Inscription client</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" type="text/css" 
                   href="Vlava/js/rs-plugin/css/settings.css" media="screen">
             <link rel="stylesheet" type="text/css" href="Vlava/css/isotope.css" media="screen">
             <link rel="stylesheet" 
-                 ss href="flexslider.css" type="text/css">
+                  ss href="flexslider.css" type="text/css">
             <link rel="stylesheet" href="Vlava/js/jquery.fancybox.css" type="text/css" 
                   media="screen">
             <link rel="stylesheet" href="Vlava/css/bootstrap.css">
@@ -28,9 +28,9 @@
             <link rel="stylesheet" href="Vlava/css/style.css">
             <!-- skin -->
             <link rel="stylesheet" href="Vlava/css/default.css">
-    </head>
+        </head>
 
-    <body>
+        <body>
         <section id="header" class="appear"></section>
         <div class="navbar navbar-fixed-top" role="navigation" 
              data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" 
@@ -69,7 +69,7 @@
                             <h2 class="section-heading animated" data-animation="bounceInUp">Inscrivez vos coordonnées</h2>
                             <h4>Les informations suivies d'un astérisque sont obligatoires.</h4>
                         </div>
-                        
+
                         <div class="cform" id="contact-form">
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
@@ -116,12 +116,39 @@
                                     </select>(*)
                                 </div>
 
-                                    <p><input type="submit" onClick="ServletInscriptionUtilisateur()" value="Envoyer"/>
+                                <p><input type="submit" onClick="ServletInscriptionUtilisateur()" value="Envoyer" class="btn btn-theme"/>
 
-                                        <input type="reset" value="Effacer"/></p>
-
+                                    <input type="reset" value="Effacer" class="btn btn-theme" /></p>
                             </form>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer" class="section footer">
+            <div class="container">
+                <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+                    <div class="col-sm-12 align-center">
+                        <ul class="social-network social-circle">
+                            <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row align-center mar-bot20">
+                    <ul class="footer-menu">
+                        <li><a href="accueil.jsp">Home</a></li>
+                        <li><a href="accueil.jsp#testimonials">Apercu</a></li>
+                        <li><a href="accueil.jsp#section-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="row align-center copyright">
+                    <div class="col-sm-12">
+                        <p>Copyright &copy; All rights reserved</p>
                     </div>
                 </div>
             </div>
