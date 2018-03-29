@@ -301,6 +301,20 @@ public class bd {
         }
         return listeUtilisateur;
     }
+    
+    //Admin peut modifier le statut de client en attente
+    public void ModifierStatutUtilisateur(Utilisateur utimodif) throws SQLException{
+              try{
+             Statement st3;
+           st3=cx.createStatement();
+           /*requete SQL*/
+           String sq="update UTILISATEUR set STATUTU='"+utimodif.getStatutu()+"' Where STATUTU='null' and TYPEU='CLIENT'";
+           int nb = st3.executeUpdate(sq);
+              }
+              catch (SQLException ex){
+                  System.out.println("erreur"+ex.getMessage());
+         }
+         }
 
 
     //Programme de test de la connexion à la bd
