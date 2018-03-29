@@ -88,16 +88,4 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
                   
                   
                   
-                  
-              
-//{
-//String nom, url;
-//RequestDispatcher rd;
-//nom = requete.getParameter("nom");
-//if (nom == null)
-// url = "pageErreur.jsp";
-//else
-// url = "trtNom.jsp";
-//rd = requete.getRequestDispatcher(url);
-//rd.forward(requete,reponse);
-//}
+        
