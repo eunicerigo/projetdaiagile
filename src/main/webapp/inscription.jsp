@@ -74,7 +74,7 @@
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
                                     Genre : (*)
-                                    <select name="genre" id ="genre"class="form-control-feedback">
+                                    <select name="genre" id ="genre"class="form-control-static">
                                         <option value="H">Homme.</option>
                                         <option value="F">Femme.</option>
                                     </select>
@@ -116,7 +116,7 @@
                                 </div>
                                 <div>
                                     Objectif:
-                                    <select name="obj" id="obj" class="form-control-feedback">
+                                    <select name="obj" id="obj" class="form-control-static">
                                         <option value="objs">objectif sportif</option>
                                         <option value="objm">objectif minceur</option>
                                     </select>(*)
