@@ -71,7 +71,11 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
            url = "testEunice.jsp";            
        } else {
            url= "testEunice2.jsp";
+    
        }
+       
+       rd = request.getRequestDispatcher(url);
+       rd.forward(request, response);
     
     
     
