@@ -25,7 +25,7 @@ import metier.Utilisateur;
  *
  * @author evaba
  */
-@WebServlet(name = "ServletListeTtClient", urlPatterns = {"/ServletListeTtClient"})
+@WebServlet(name = "ServletListeTtClient", urlPatterns = {"/ServletListeClientStatut"})
 public class ServletListeClientStatut extends HttpServlet {
 
     @Override
