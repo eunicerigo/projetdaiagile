@@ -21,7 +21,7 @@
                   href="Vlava/js/rs-plugin/css/settings.css" media="screen">
             <link rel="stylesheet" type="text/css" href="Vlava/css/isotope.css" media="screen">
             <link rel="stylesheet" 
-                  href="flexslider.css" type="text/css">
+                 ss href="flexslider.css" type="text/css">
             <link rel="stylesheet" href="Vlava/js/jquery.fancybox.css" type="text/css" 
                   media="screen">
             <link rel="stylesheet" href="Vlava/css/bootstrap.css">
