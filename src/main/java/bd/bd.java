@@ -14,6 +14,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.servlet.RequestDispatcher;
 import metier.Utilisateur;
 
 /**
@@ -318,7 +319,22 @@ public class bd {
         for (Utilisateur user : listeUtilisateur) {
             System.out.println(user.getNomu() + " " + user.getPrenomu() + " " 
                 + " " + user.getStatutu() + " " + user.getStringDate(user.getDateinscri()));
+            
+        
        }
         //unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
+        
+//        
+//        SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/YYYY");
+//        
+//       Date x =  formatDate.parse("02/12/1995");
+//         
+//       Utilisateur ut1  = new Utilisateur("elie","caca","nice@cc.com","love","H",x,"0777800978","CLIENT",x,"Potentiel");
+//        
+//       bd newbd = new bd(); 
+//       
+//       int i = newbd.inscrirebaseutilisateur(ut1) ;
+       
+       
     }
 }
