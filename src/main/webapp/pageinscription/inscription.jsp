@@ -29,7 +29,27 @@
     </head>
 
     <body>
+        <section id="header" class="appear"></section>
+        <div class="navbar navbar-fixed-top" role="navigation" 
+             data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" 
+             data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="fa fa-bars color-white"></span>
+                    </button>
+                </div>
 
+                <!-- Menu en haut -->
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+                        <li><a href="#section-about">Home</a></li>
+                        <li><a href="#testimonials">Apercu</a></li>
+                        <li><a href="#section-contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <section id="intro">
             <div class="intro-content">
