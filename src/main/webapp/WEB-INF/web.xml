@@ -16,6 +16,17 @@
         <servlet-name>ServletListeClientStatut</servlet-name>
         <url-pattern>/ServletListeClientStatut</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>ServletInscriptionUtilisateur</servlet-name>
+        <servlet-class>servlet.ServletInscriptionUtilisateur</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletInscriptionUtilisateur</servlet-name>
+        <url-pattern>/ServletInscriptionUtilisateur</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
