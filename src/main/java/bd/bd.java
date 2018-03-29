@@ -22,7 +22,7 @@ import metier.Utilisateur;
  */
 public class bd {
 
-    private Connection cx;
+    private static Connection cx;
 
     //Données de connexion
     private String url = "jdbc:mysql://ivgz2rnl5rh7sphb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/pef1s12npqjzdjql";
@@ -233,6 +233,74 @@ public class bd {
         }
         return nb_ligne_modifie;
     }
+    
+    //Methode de récuperration des utilisateurs
+    public static ArrayList<Utilisateur> obteniruClientsSelonStatut(String statut) throws ParseException {
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+        String recupererUtilisateur = null;
+        ArrayList<Utilisateur> listeUtilisateur = new ArrayList();
+        //Espace d'exécution de la requête
+        Statement st = null;
+        try {
+            //Espace d'exécution de la requête
+            st = cx.createStatement();
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de la création de l'espace d'exécution " + ex.getMessage());
+        }
+
+        //Requête SQL
+        if(statut.equals("Abonné")) {
+            recupererUtilisateur = "SELECT NOMU, PRENOMU, STATUTU, DATEINSCRI "
+                + "FROM UTILISATEUR WHERE TYPEU = 'CLIENT' AND STATUTU LIKE "
+                + "'%"+statut+"%' ORDER BY NOMU, PRENOMU";
+        } else {
+            recupererUtilisateur = "SELECT NOMU, PRENOMU, STATUTU, DATEINSCRI "
+                + "FROM UTILISATEUR WHERE TYPEU = 'CLIENT' AND STATUTU LIKE "
+                + "'%"+statut+"%' DATEINSCRI";
+        }
+        
+        //Ouverture de l'espace de requête
+        ResultSet rs = null;
+        try {
+            rs = st.executeQuery(recupererUtilisateur);
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de l'interrogation de la base de données " + ex.getMessage());
+        }
+
+        //Ecriture des résultats de la requête dans la liste des messages
+        try {
+            while (rs.next()) {
+                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"),
+                        rs.getString("PRENOMU"), rs.getString("STATUTU"),
+                        formatDate.parse(rs.getString("DATEINSCRI"))));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de l'écriture dans la liste des messages " + ex.getMessage());
+        }
+
+        //Fermeture de l'espace de requête
+        try {
+            rs.close();
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de la fermeture de l'espace de requête " + ex.getMessage());
+        }
+
+        //Fermeture de l'espace d'exécution de la requête
+        try {
+            st.close();
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de la fermeture de l'espace d'exécution de la requête " + ex.getMessage());
+        }
+
+        //Fermeture de la connexion à la base de données
+        try {
+            cx.close();
+        } catch (SQLException ex) {
+            System.out.println("Echec lors de la fermeture de la connexion à la base de données " + ex.getMessage());
+        }
+        return listeUtilisateur;
+    }
+
 
     //Programme de test de la connexion à la bd
     public static void main(String[] args) throws SQLException, ParseException {
