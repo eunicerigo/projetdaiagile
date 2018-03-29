@@ -122,7 +122,7 @@
                                     </select>(*)
                                 </div>
 
-                                <p><input type="submit" onClick="ServletInscriptionUtilisateur()" value="Envoyer" class="btn btn-theme"/>
+                                <p><input type="submit" onClick="ServletInscriptionUtilisateur" value="Envoyer" class="btn btn-theme"/>
                                    <input type="reset" value="Effacer" class="btn btn-theme" /></p>
                             </form>
                         </div>
