@@ -61,8 +61,8 @@
                 <h2>JEAN DAVID COACHING</h2>
                 <h3>Bienvenue!</h3>
                 <div>
-                    <a href="connection.html" class="btn-get-started scrollto">LOG IN</a>
-                    <a href="inscription.jsp" class="btn-get-started scrollto">INSCRIRE</a>
+                    <a href="login.jsp" class="btn-get-started scrollto">LOG IN</a>
+                    <a href="connection.html" class="btn-get-started scrollto">INSCRIRE</a>
                 </div>
             </div>
         </section>
