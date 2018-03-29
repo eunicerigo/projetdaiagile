@@ -72,7 +72,7 @@
                         <div class="cform" id="contact-form">
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
-                                    Civilité: <select name="genre" id ="genre">
+                                    Genre: <select name="genre" id ="genre">
                                         <option value="H">Homme.</option>
                                         <option value="F">Femme.</option>
                                     </select>(*)
