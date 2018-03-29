@@ -72,7 +72,7 @@ function liste_Client_Potentiel() {
         }
     };
     // Requête au serveur avec les paramètres éventuels.
-    requeteXML.open("GET", "ServletListeClientSelonStatut?statut=Potentiel", true);
+    requeteXML.open("GET", "ServletListeClientSelonStatut" + "?statut=Potentiel", true);
     requeteXML.send(null);
 }
 
