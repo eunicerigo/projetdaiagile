@@ -103,16 +103,16 @@
                                 </div>
                                 
                                 <div class="field your-email form-group">
-                                    Adresse Email:
-                                    <input type="email" name="mail1" id="mail1" placeholder="Email" class="cform-text" size="40" required>(*)
+                                    Adresse Email : (*)
+                                    <input type="email" name="mail1" id="mail1" placeholder="Email" class="cform-text" size="40" required>
                                 </div>
                                 <div class="field your-email form-group">
-                                    Confirmation Email:
-                                    <input type="email" name="mail2" id="mail2" placeholder="Confirmation Email" class="cform-text" size="40" required>(*)
+                                    Confirmation Email : (*)
+                                    <input type="email" name="mail2" id="mail2" placeholder="Confirmation Email" class="cform-text" size="40" required>
                                 </div>
                                 <div class="field your-name form-group">
-                                    Mot de passe:
-                                    <input type="password" name="mdp" id = "mdp" class="cform-text" size="40" required>(*)
+                                    Mot de passe : (*)
+                                    <input type="password" name="mdp" id = "mdp" class="cform-text" size="40" required>
                                 </div>
                                 <div>
                                     Objectif:
