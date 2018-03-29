@@ -137,7 +137,7 @@ public class bd {
         return listeUtilisateur;
     }
 
-    public int inscrirebaseutilisateur(Utilisateur lutilisateur) {
+    public static int inscrirebaseutilisateur(Utilisateur lutilisateur) {
         //Espace d'exécution de la requête
         Statement st = null;
         try {
