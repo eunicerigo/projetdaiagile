@@ -103,6 +103,10 @@ public class Utilisateur {
         this.dateinscri = dateinscri;
     }
 
+    public Utilisateur(int codeu, String nomu, String prenomu, String mailu, String genreu, Date datenaissance, String telu, String infooptionnelle, String typeu) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Méthode permettant de récupérer le code de l'utilisateur
      * @return le code de l'utilisateur
