@@ -79,65 +79,48 @@ public class bd {
     }
 
     //Methode de récuperration des utilisateurs
-    public ArrayList<Utilisateur> obtenirutilisateurs() throws ParseException {
-        SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
-        
-        ArrayList<Utilisateur> listeUtilisateur = new ArrayList();
-        //Espace d'exécution de la requête
-        Statement st = null;
-        try {
-            //Espace d'exécution de la requête
-            st = cx.createStatement();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de la création de l'espace d'exécution " + ex.getMessage());
-        }
+    public ArrayList<Utilisateur> ConsulterUtilisateur() throws SQLException {
+        int codeu;
+        String nomu ;
+        String prenomu ;
+        String mailu;
+        String genreu;
+        Date datenaissance;
+        String telu;
+        String infooptionnelle;
+        String typeu;
+        Statement st;
+        ResultSet rs;
 
-        //Requête SQL
-        String recupererUtilisateur = "SELECT NOMU, PRENOMU, STATUTU, DATEINSCRI FROM UTILISATEUR WHERE TYPEU = 'CLIENT'";
+        String sql = "select CODEU,NOMU, PRENOMU, MAILU, GENREU, DATENAISSANCE, TELU, INFOOPTIONNELLE, TYPEU from UTILISATEUR;";
+        st = cx.createStatement();
+        ArrayList<Utilisateur> liste = new ArrayList<>();
 
-        //Ouverture de l'espace de requête
-        ResultSet rs = null;
-        try {
-            rs = st.executeQuery(recupererUtilisateur);
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de l'interrogation de la base de données " + ex.getMessage());
-        }
+        try{
+            rs = st.executeQuery(sql);
 
-        //Ecriture des résultats de la requête dans la liste des messages
-        try {
             while (rs.next()) {
-                listeUtilisateur.add(new Utilisateur(rs.getString("NOMU"),
-                        rs.getString("PRENOMU"), rs.getString("STATUTU"),
-                        formatDate.parse(rs.getString("DATEINSCRI"))));
+                codeu = rs.getInt("CODEU");
+                nomu = rs.getString("NOMU");
+                prenomu = rs.getString("PRENOMU");
+                mailu = rs.getString("MAILU");
+                genreu = rs.getString("GENREU");
+                datenaissance=rs.getDate("DATENAISSANCE");
+                telu=rs.getString("TELU");
+                infooptionnelle=rs.getString("INFOOPTIONNELLE");
+                typeu=rs.getString("TYPEU");
+
+                liste.add(new Utilisateur(codeu,nomu,prenomu, mailu,genreu, (java.sql.Date) datenaissance,telu,infooptionnelle,typeu));
             }
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de l'écriture dans la liste des messages " + ex.getMessage());
         }
-
-        //Fermeture de l'espace de requête
-        try {
-            rs.close();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de la fermeture de l'espace de requête " + ex.getMessage());
+        catch(SQLException ex){
+            System.out.println("erreur"+ex.getMessage());
         }
+    return liste;
+}
 
-        //Fermeture de l'espace d'exécution de la requête
-        try {
-            st.close();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de la fermeture de l'espace d'exécution de la requête " + ex.getMessage());
-        }
 
-        //Fermeture de la connexion à la base de données
-        try {
-            cx.close();
-        } catch (SQLException ex) {
-            System.out.println("Echec lors de la fermeture de la connexion à la base de données " + ex.getMessage());
-        }
-        return listeUtilisateur;
-    }
-
-    public static int inscrirebaseutilisateur(Utilisateur lutilisateur) {
+    public int inscrirebaseutilisateur(Utilisateur lutilisateur) {
         //Espace d'exécution de la requête
         Statement st = null;
         try {
@@ -329,13 +312,15 @@ public class bd {
 //        int nb_ligne_mod = unebd.inscrirebaseutilisateur(u1);
 
 //        System.out.println("nombre de ligne modifiée " + nb_ligne_mod);
-        ArrayList<Utilisateur> listeUtilisateur = unebd.obtenirutilisateurs();
-        for (Utilisateur user : listeUtilisateur) {
-            System.out.println(user.getNomu() + " " + user.getPrenomu() + " " 
-                + " " + user.getStatutu() + " " + user.getStringDate(user.getDateinscri()));
-            
+     
+        bd newbd = new bd();
+        ArrayList<Utilisateur> lstUtilisateur = newbd.ConsulterUtilisateur();
+        for    (Utilisateur utili:lstUtilisateur){
+            System.out.println("Utilisateur inscrit:" + utili.getNomu()+ " "+utili.getMailu());
+            }
+
         
-       }
+
         //unebd.verifLogin("EVABAIBAI@GMAIL.COM", "123123");
         
 //        
