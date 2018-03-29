@@ -73,11 +73,11 @@
                         <div class="cform" id="contact-form">
                             <form name="Formulaires" method="get" onsubmit="return verifier()">
                                 <div name='genre'>
-                                    Genre: 
+                                    Genre : (*)
                                     <select name="genre" id ="genre"class="form-control-static">
                                         <option value="H">Homme.</option>
                                         <option value="F">Femme.</option>
-                                    </select>(*)
+                                    </select>
                                 </div>
 
                                 <div class="field your-name form-group">
