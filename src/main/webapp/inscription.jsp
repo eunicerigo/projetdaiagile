@@ -81,21 +81,27 @@
                                 </div>
 
                                 <div class="field your-name form-group">
-                                    Nom:<input type="text" name="Nom" id ="nom" placeholder="Nom" class="cform-text" size="40" required>(*)
+                                    Nom : (*)
+                                    <input type="text" name="Nom" id ="nom" placeholder="Nom" class="cform-text" size="40" required>
                                     <div class="validation"></div>
                                 </div>
+                                
                                 <div class="field your-name form-group">
-                                    Prénom:<input type="text" name="Prenom" id ="prenom" placeholder="Prénom" class="cform-text" size="40" required>(*)
+                                    Prénom : (*)
+                                    <input type="text" name="Prenom" id ="prenom" placeholder="Prénom" class="cform-text" size="40" required>
                                     <div class="validation"></div>
                                 </div>
-                                <div>
-                                    Date de naissance:
-                                    <input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" class="cform-text" size="40" required>(*)
+                                
+                                <div class="field your-name form-group">
+                                    Date de naissance : (*)
+                                    <input type="date" name="date" id ="date" placeholder="dd/mm/yyyy" class="cform-text" size="40" required>
                                 </div>
+                                
                                 <div>
                                     Numéro de téléphone:
                                     <input type="text" name="tel" id="tel" pattern="[0-9]{10}" class="cform-text" size="40" required>(*)
                                 </div>
+                                
                                 <div class="field your-email form-group">
                                     Adresse Email:
                                     <input type="email" name="mail1" id="mail1" placeholder="Email" class="cform-text" size="40" required>(*)
