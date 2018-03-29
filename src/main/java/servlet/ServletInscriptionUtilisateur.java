@@ -62,18 +62,41 @@ public class ServletInscriptionUtilisateur extends HttpServlet {
        Utilisateur ut1  = new Utilisateur(nom,prenom,mail1,mdp,genre,datenaissance,tel,"CLIENT",datenaissance,"Potentiel");
         
        bd newbd = new bd(); 
+       String url = "testEunice.html"; 
+         RequestDispatcher rd ;
        
        int i = newbd.inscrirebaseutilisateur(ut1) ;
        
+       
+       
+       
        if ( i != 0 ){
-           
-            RequestDispatcher rd = null;
             
-              rd = request.getRequestDispatcher("testEunice.html");// 
-              rd.forward(request, response);
-            
-           
-       }
+           url = "testEunice.html"; 
+    
               
-    }
+              
+              {
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              }
+{
+String nom, url;
+RequestDispatcher rd;
+nom = requete.getParameter("nom");
+if (nom == null)
+ url = "pageErreur.jsp";
+else
+ url = "trtNom.jsp";
+rd = requete.getRequestDispatcher(url);
+rd.forward(requete,reponse);
 }
