@@ -45,8 +45,8 @@
                 <!-- Menu en haut -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-                        <li><a href="#section-about">Home</a></li>
-                        <li><a href="#testimonials">Apercu</a></li>
+                        <li><a href="accueil.jsp">Home</a></li>
+                        <li><a href="accueil.jsp#testimonials">Apercu</a></li>
                         <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </div>
