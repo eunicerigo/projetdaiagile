@@ -29,6 +29,7 @@ public class bd {
     private String url = "jdbc:mysql://ivgz2rnl5rh7sphb.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/pef1s12npqjzdjql";
     private String login = "vaburf7btkwebup2";
     private String password = "yd1h1k477wysphga";
+  
 
     //Constructeur
     public bd() {
@@ -110,7 +111,7 @@ public class bd {
                 infooptionnelle=rs.getString("INFOOPTIONNELLE");
                 typeu=rs.getString("TYPEU");
 
-                liste.add(new Utilisateur(codeu,nomu,prenomu, mailu,genreu, (java.sql.Date) datenaissance,telu,infooptionnelle,typeu));
+                liste.add(new Utilisateur(codeu,nomu,prenomu, mailu,genreu, datenaissance,telu,infooptionnelle,typeu));
             }
         }
         catch(SQLException ex){
