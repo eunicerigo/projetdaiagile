@@ -8,6 +8,14 @@
         <servlet-name>verif</servlet-name>
         <url-pattern>/verif</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletListeClientStatut</servlet-name>
+        <servlet-class>servlet.ServletListeClientStatut</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletListeClientStatut</servlet-name>
+        <url-pattern>/ServletListeClientStatut</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -8,5 +8,7 @@
 <a href="accueil.jsp">accueil</a>
 <br>
 <a href="inscription.jsp">inscription</a>
+<br>
+<a href="listeTtClient.html">liste des clients</a>
 </body>
 </html>
